@@ -17,7 +17,7 @@ function getTemp(){
             lon = position.coords.longitude;
             //console.log(lat,long);
 
-            const apis = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=3a87a59902f2f2e6a985b0c85b238288&units=metric`
+            const apis = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=3a87a59902f2f2e6a985b0c85b238288&units=metric`
             fetch(apis)
                 .then((response)=>{
                     return response.json();
