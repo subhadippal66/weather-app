@@ -7,9 +7,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;500;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Weather</title>
+    <link rel = "icon" href =  
+"weather.png" 
+        type = "image/x-icon">
 </head>
 <body>
-    <div class="img"><img src="Weather icon/clear sky.png" alt=""></div>
+    <div class="search-box">
+        <form id="content">
+            <input type="text" name="input" class="input" placeholder="search cities here">
+            <button type="submit" name="search" class="search"><img src="search.png" alt=""></button>
+        </form>
+    </div>
+    <div><img class="imgIcon" src="Weather icon/clear sky.png" alt=""></div>
     <div class="location">
         <h1 class="location-timezone">Location</h1>
         <h2 class="country">IN</h2>

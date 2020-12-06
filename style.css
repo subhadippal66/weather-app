@@ -18,10 +18,11 @@ body{
 
 
 
-.img img{
+.imgIcon{
     margin-top: 20px;
-    width: 200px;
+    
     height: 200px;
+    width: auto;
 }
 
 .location, .temp{
@@ -32,7 +33,7 @@ body{
 }
 
 .location{
-    margin: 2rem;
+    margin: 1rem;
 }
 .country{
     font-weight: 100;
@@ -72,7 +73,7 @@ body{
 .temp-description{
     font-weight: 100;
     font-size: 1.5rem;
-    margin: 1rem;
+    margin: 0rem;
 }
 
 
@@ -121,9 +122,69 @@ body{
         flex-direction: column;
         margin: 0rem;
     }
+   
 }
 
 
 .unitdiv{
     font-size: .8rem;       
+}
+
+.search-box{
+    margin-top: 1rem;
+}
+#content{
+    display: flex;
+}
+
+.input{
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+    width: 600px;
+    border: 5px solid white;
+    border-right: none;
+    background: none;
+    border-radius: 50px 0  0 50px;
+    color: white;
+    padding-left: 1rem;
+    transition: all .3s ease;
+}
+.search{
+    font-size: 1.5rem;
+    border-radius: 0 50px 50px 0;
+    border: 5px solid white;
+    border-left: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+    font-weight: 100;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease;
+    
+}
+.search img{
+    width: 40px;
+    height: 40px;
+    
+}
+.input:focus, .search:focus{
+    outline: none;  
+    border-color: #cfc208;  
+}
+
+.search:active , .input:active{
+    outline: none;    
+}
+
+@media(max-width:650px){
+    .input{
+        width: 280px;
+    }
+}
+@media(max-width:350px){
+    .input{
+        width: 180px;
+    }
 }
