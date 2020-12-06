@@ -3,6 +3,7 @@ let lon;
 let tempInC;
 let weatherid;
 let dataAPI; 
+let night;
 
 const tempText= document.querySelector(".temp-deg");
 const citynameText = document.querySelector(".location-timezone");
@@ -59,6 +60,7 @@ function getTemp(){
 
                     //console.dir(img.src);
                     weatherid = data.weather[0].id;
+                    night = data.weather[0].icon[2];
                     changeimg();
 
                 })
@@ -132,6 +134,7 @@ function weatherOfCity(){
 
                     //console.dir(img.src);
                     weatherid = data.weather[0].id;
+                    night = data.weather[0].icon[2];
                     changeimg();
 
                 })
@@ -161,7 +164,13 @@ function changeimg(){
         img.src = 'Weather icon/mist.png';
     }
     else if(weatherid==800){
-        img.src = 'Weather icon/clear sky.png';
+        if(night === 'd'){
+            img.src = 'Weather icon/clear sky.png';
+        }
+        else if(night === 'n'){
+            img.src = 'Weather icon/clear sky night.png';
+        }
+        
     }
     else if(weatherid==801){
         img.src = 'Weather icon/few clouds.png';
